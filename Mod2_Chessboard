@@ -1,0 +1,25 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		// Create the pattern of a chess board that is 8 x 8. Use X and O to represent the squares.
+		// Output should look like this:     
+		// xoxoxoxo
+		// oxoxoxox
+		// xoxoxoxo
+		// oxoxoxox
+		// xoxoxoxo
+		// oxoxoxox
+		// xoxoxoxo
+		// oxoxoxox
+
+		// write a FOR loop of 2x4 lines of chess board squares
+		for (int n = 0; n < 4; n++)
+		{
+			Console.WriteLine("xoxoxoxo");
+			Console.WriteLine("oxoxoxox");
+		};
+	}
+}
