@@ -1,0 +1,47 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// Create a switch block
+		Console.WriteLine("Sunbucks Coffee sizes: 1 = Tall, 2 = Grande, 3 = Venti");
+		Console.WriteLine("Please enter your coffee size selection:");
+		
+		// Get input for selection
+		string selection = Console.ReadLine();
+		
+		// create variable for Cost and set a default value
+		int cost = 0;
+		
+		// Create switch cases here
+		switch (selection)
+		{
+			case "1":
+			case "tall":
+				cost = 25;
+				break;
+			
+			case "2":
+			case "grande":
+				cost = 50;
+				break;
+				
+			case "3":
+			case "venti":
+				cost = 75;
+				break;
+				
+			default:
+				Console.WriteLine("Invalid selection. Please enter 1, 2 , or 3.");
+				break;
+		}
+		
+		if (cost != 0)
+		{
+			Console.WriteLine("Please pay {0} cents.", cost);
+		}
+		
+		Console.WriteLine("Thank you for your business!");
+	}
+}
