@@ -1,0 +1,95 @@
+using System;
+
+namespace Mod1_Assignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create variables and initialize default values
+            // Variables for personal information
+            string firstName = "";
+            string lastName = "";
+            DateTime birthDate;
+            string address1 = "";
+            string address2 = "";
+            string city = "";
+            string stateProvince = "";
+            string zipPostal = "";
+            string country = "";
+
+            string teacherFirstName = "";
+            string teacherLastName = "";
+
+            // Variables for UProgram information
+            string programName = "";
+            string departmentHead = "";
+            string degree = "";
+
+            // Variables for Degree information
+            string degreeName = "";
+            int creditsRequired = 0;
+
+            // Variable for Course information
+            string courseName = "";
+            int credit = 0;
+            int durationInWeeks = 0;
+            string teacher = "";
+
+            //Assign values to Student Information
+            firstName = "Bob";
+            lastName = "Myers";
+            birthDate = new DateTime(1996, 1, 30, 23, 59, 5);
+            address1 = "44th Wick Drive";
+            address2 = "#01-04";
+            city = "Longtown";
+            stateProvince = "London";
+            zipPostal = "500231";
+            country = "United Kingdom";
+
+            teacherFirstName = "Dave";
+            teacherLastName = "Law";
+
+            programName = "Computer Science";
+            departmentHead = "Wendy Carison";
+            degree = "Bachelors of Science";
+
+            degreeName = "Degree in Computer Science";
+            creditsRequired = 30;
+
+            courseName = "C Sharp elementary";
+            credit = 3;
+            durationInWeeks = 4;
+            teacher = teacherFirstName + " " + teacherLastName;
+
+            // output to the console window
+            Console.WriteLine(
+                "The student personal information:" + Environment.NewLine +
+                firstName + " " + lastName + Environment.NewLine +
+                birthDate + Environment.NewLine +
+                address1 + ", " + address2 + ", " + city + ", " + stateProvince + ", " + zipPostal + ", " + country + Environment.NewLine
+                );
+
+            Console.WriteLine(
+                "UProgram Information:" + Environment.NewLine +
+                "Program Name: " + programName + Environment.NewLine +
+                "Department Head: " + departmentHead + Environment.NewLine +
+                "Level of Study: " + degree
+                );
+
+            Console.WriteLine(
+                "Degree Information:" + Environment.NewLine +
+                "Degree Name: " + degreeName + Environment.NewLine +
+                "Credits Required: " + creditsRequired
+                );
+
+            Console.WriteLine(
+                "Course Information:" + Environment.NewLine +
+                "Course Name: " + courseName + Environment.NewLine +
+                "Credit Awarded: " + credit + Environment.NewLine +
+                "Teaching Duration (in weeks): " + durationInWeeks + Environment.NewLine +
+                "Teacher for the course: " + teacher
+                );
+        }
+    }
+}
