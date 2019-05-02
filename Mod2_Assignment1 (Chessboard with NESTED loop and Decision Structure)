@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// For this assignment, you will create the pattern of a chess board that is 8 x 8. Use X and O to represent the squares.
+		// Used a nested loop
+		// Used a decision structure to flip row output
+		
+		int column;
+		int row;
+		
+		for (column = 0; column < 8; column++) // create column of 8
+		{
+			for (row = 0; row < 8; row++) // create row of 8
+			
+				if ((column + row) % 2 == 1) // write X if row is odd number
+				Console.Write("X");
+			
+				else if ((column + row) % 2 == 0) // write O if row is even number
+				Console.Write("O");
+				
+				else
+				Console.Write("Neither X or O"); // indicate if row is neither even nor odd number
+			
+			if (column % 2 == 0) // write onto a new line when row number reaches the count of 8
+				Console.WriteLine();
+			else 
+				Console.WriteLine();
+		}
+	}
+}
