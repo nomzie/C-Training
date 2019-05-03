@@ -1,0 +1,58 @@
+// In the assignment, you are to practice getting values from a user and assigning the values to local variables
+// Create a method called GetStudentInformation() and in that method
+// prompt the user for each piece of student information and then assign it to the variables
+// Next, create methods such as PrintStudentDetails(string first, string last, string birthday)
+// that accepts the proper variables, and use an appropriate message to print the content to the console window.
+
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		GetStudentInformation();
+	}
+	
+	// create a method GetStudentInformation()
+	static void GetStudentInformation ()
+	{
+		// Ask user input for student information
+		Console.WriteLine("Please enter student given name:");
+		string firstName = Console.ReadLine();
+		
+		Console.WriteLine("Please enter student last name:");
+		string lastName = Console.ReadLine();
+		
+		Console.WriteLine("Please enter student date of birth by yyyy/mm/dd:");
+		DateTime dob = CheckDate(Console.ReadLine());
+		//DateTime dob; //create birthday in datetime format
+		//var userInputDate = Console.ReadLine(); //create a placeholder for user input on birthday
+		//DateTime.TryParse(userInputDate, out dob);
+		string birthday = dob.ToString("dd/MM/yyyy");
+		
+		// call PrintStudentDetails method to print details
+		PrintStudentDetails(firstName, lastName, birthday);
+	}
+	
+	// create a method PrintStudentDetails()
+	static void PrintStudentDetails(string first, string last, string birthday)
+	{
+		Console.WriteLine("{0} {1} was born on: {2}.",first, last, birthday);
+	}
+	
+	// create a method to catch DateTime exception for birthday
+	static DateTime CheckDate(string date)
+	{
+		try
+		{
+			DateTime dob = DateTime.Parse(date);
+			return dob;
+		}
+		
+		catch (FormatException)
+		{
+			Console.WriteLine("Invalid date. Please follow the date format in YYYY/MM/DD.");
+			return DateTime.Today;
+		}		
+	}
+}
