@@ -1,0 +1,25 @@
+// get user input as date
+// print out the input value
+// remove the Time portion from DateTime
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// declare variable
+		DateTime dob;
+		
+		// print out instruction to user
+		Console.WriteLine("Please enter student date of birth by yyyy/mm/dd:");
+		
+		// get user input
+		var userInputDOB = Console.ReadLine();
+		
+		// try to parse in userinput into variable created above
+		DateTime.TryParse(userInputDOB, out dob);
+		
+		// print out userinput and convert it to string as well as removing the Time portion
+		Console.WriteLine(dob.ToString("yyyy/MM/dd"));
+	}
+}
