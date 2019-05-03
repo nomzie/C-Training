@@ -1,0 +1,49 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		// initialize the variables
+		int first = 9;
+		int second = 0;
+		
+		// get user input for first and second value
+		Console.WriteLine("Enter your first number:");
+		first = System.Int32.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Enter your second number:");
+		second = System.Int32.Parse(Console.ReadLine());
+		
+		// calling Divide() method to your argument
+		int result = Divide(first, second);
+		Console.WriteLine("The result of dividing {0} by {1} is {2}.", first, second, result);
+	}
+	
+	// Method Divide() accepts two integer arguments and returns the result of dividing first by second
+	// Method Divide() that contains exception handling to deal with divide by zero exceptions.
+	static int Divide(int first, int second)
+	{
+		// intialize result
+		int result = 0;
+		
+		// create TRY block to wrap the line of code that could cause an exception
+		// only need to place code that is potentially error prone, inside the try block
+		// do not place the variable declaration inside the try block
+		try
+		{
+			result = first / second;
+		}
+		
+		// create CATCH for catching exception
+		catch (DivideByZeroException)
+		{
+			Console.WriteLine("Cannot divide by zero. Please provide a non-zero value for your second value.");
+		}
+		
+		// return your TRY block result here
+		// moved the declaration of result on a line of its own
+		// This is necessary to ensure we have access to it both inside and outside of the exception handling code
+		return result;
+	}
+}
